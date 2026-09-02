@@ -1,0 +1,31 @@
+19:42:46 | INFO    | routers.query | === /api/query/stream received | question='show top 10 students from the databse' ===
+INFO:     127.0.0.1:43274 - "POST /api/query/stream HTTP/1.1" 200 OK
+19:42:46 | INFO    | routers.query | Agent run started | question='show top 10 students from the databse'
+19:42:53 | INFO    | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+19:42:53 | INFO    | routers.query | [ 7652ms] tool_call=sql_db_list_tables args={}
+19:42:53 | INFO    | routers.query | [ 7655ms] tool_result=sql_db_list_tables content='branch, results, students'
+19:42:53 | INFO    | routers.query | [ 7655ms] Tables found: ['branch', 'results', 'students']
+19:42:55 | INFO    | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+19:42:55 | INFO    | routers.query | [ 9494ms] tool_call=sql_db_schema args={'table_names': 'students, results'}
+19:42:56 | INFO    | routers.query | [10720ms] tool_result=sql_db_schema content='\nCREATE TABLE results (\n\tsid TEXT, \n\tmarks INTEGER, \n\tCONSTRAINT results_sid_fkey FOREIGN KEY(sid) REFERENCES students (sid)\n)\n\n/*\n3 rows from results table:\nsid\tmarks\nS101\t92\nS102\t85\nS103\t88\n*/\n\n\nCRE'
+19:42:58 | INFO    | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+19:42:58 | INFO    | routers.query | [12563ms] tool_call=sql_db_query_checker args={'query': 'SELECT s.name, r.marks FROM students s JOIN results r ON s.sid = r.sid ORDER BY r.marks DESC LIMIT 10'}
+19:42:58 | INFO    | google_genai.models | AFC is enabled with max remote calls: 10.
+19:43:02 | INFO    | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+19:43:02 | INFO    | routers.query | [16251ms] tool_result=sql_db_query_checker content='SELECT s.name, r.marks FROM students s JOIN results r ON s.sid = r.sid ORDER BY r.marks DESC LIMIT 10'
+19:43:03 | INFO    | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+19:43:03 | INFO    | routers.query | [17686ms] tool_call=sql_db_query args={'query': 'SELECT s.name, r.marks FROM students s JOIN results r ON s.sid = r.sid ORDER BY r.marks DESC LIMIT 10'}
+19:43:03 | INFO    | routers.query | [17686ms] SQL generated: SELECT s.name, r.marks FROM students s JOIN results r ON s.sid = r.sid ORDER BY r.marks DESC LIMIT 10
+19:43:04 | INFO    | routers.query | [18298ms] tool_result=sql_db_query content="[('Meena', 95), ('Charan', 92), ('Anu', 88), ('Ravi', 85), ('Kiran', 76)]"
+19:43:06 | INFO    | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+19:43:06 | INFO    | routers.query | [19938ms] Final answer: The top students are:
+Meena with 95 marks
+Charan with 92 marks
+Anu with 88 marks
+Ravi with 85 marks
+Kiran with 76 marks
+19:43:06 | INFO    | routers.query | Token usage: {'prompt': 1178, 'completion': 86, 'total': 1264}
+19:43:06 | INFO    | routers.query | Agent run finished in 19938ms | steps=11
+19:43:06 | INFO    | routers.query | Executing SQL against DB: SELECT s.name, r.marks FROM students s JOIN results r ON s.sid = r.sid ORDER BY r.marks DESC LIMIT 10
+19:43:10 | INFO    | routers.query | SQL execution returned 5 row(s), 2 column(s)
+19:43:10 | INFO    | routers.query | === /api/query/stream done in 19938ms ===

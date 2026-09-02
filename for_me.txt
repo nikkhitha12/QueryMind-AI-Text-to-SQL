@@ -1,0 +1,31 @@
+"This project is an AI-powered Natural Language to SQL Query System. It allows users to ask database questions in plain English, such as 'Who is the university topper?' or 'Show students with CGPA above 9'. The system uses Google's Gemini LLM along with LangChain and LangGraph to understand the user's query, automatically generate SQL statements, execute them on a PostgreSQL database, and return human-readable answers. It uses a ReAct Agent architecture, which enables the AI to inspect database schemas, identify relevant tables, generate correct SQL queries, execute them safely, and provide results without requiring users to know SQL."
+
+Flow:
+
+User Question → Gemini LLM → LangChain SQL Agent → Database Schema Analysis → SQL Query Generation → PostgreSQL Execution → Human Readable Response
+
+Technologies Used
+Python
+LangChain
+LangGraph
+Gemini 2.0 Flash
+PostgreSQL
+SQLAlchemy
+PyMySQL
+LangSmith
+ReAct Agents
+Current Features
+Natural language database querying
+Automatic SQL generation
+Database schema understanding
+PostgreSQL integration
+ReAct agent reasoning
+Query execution and result interpretation
+Streaming responses
+Strong Resume Points You Can Add
+Built an AI-powered Text-to-SQL system using LangChain, LangGraph, and Gemini 2.0 Flash for natural language database interaction.
+Implemented ReAct Agent architecture capable of schema discovery, SQL generation, query execution, and response reasoning.
+Integrated PostgreSQL databases through SQLAlchemy for dynamic schema-aware querying.
+Enabled multi-step reasoning using LangGraph workflows to improve query accuracy and reliability.
+Utilized LangSmith prompt management for agent orchestration and debugging.
+Developed a conversational analytics assistant capable of answering business intelligence questions without SQL knowledge.
