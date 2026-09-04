@@ -2,7 +2,7 @@ import logging
 from langchain_community.utilities import SQLDatabase
 from langchain.chat_models import init_chat_model
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langsmith import Client
 from config import DATABASE_URL, LLM_MODEL, LLM_TOP_K, SQL_DIALECT
 
@@ -28,7 +28,11 @@ def init_agent() -> None:
         dangerously_pull_public_prompt=True,
     )
     system_message = tpl.format(dialect=SQL_DIALECT, top_k=LLM_TOP_K)
-    _agent = create_react_agent(llm, toolkit.get_tools(), prompt=system_message)
+    _agent = create_agent(
+    model=llm,
+    tools=toolkit.get_tools(),
+    system_prompt=system_message,
+)
     logger.info("Agent ready — tables: %s", _sql_db.get_usable_table_names())
 
 
