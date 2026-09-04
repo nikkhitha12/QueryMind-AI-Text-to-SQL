@@ -7,5 +7,6 @@ psycopg[binary]==3.2.9
 langchain==1.0.7
 langchain-community==0.4.2
 langchain-google-genai==3.1.0
-langgraph==0.6.6
+langgraph==1.0.7
+
 psycopg2-binary
