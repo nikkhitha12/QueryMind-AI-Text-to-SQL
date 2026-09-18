@@ -1,12 +1,16 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 async function apiFetch(path, options = {}) {
-  const res = await fetch(path, {
+  const res = await fetch(`${API_BASE_URL}${path}`, {
     headers: { 'Content-Type': 'application/json' },
     ...options,
   })
+
   if (!res.ok) {
     const err = await res.json().catch(() => ({}))
     throw new Error(err.detail || `Request failed (${res.status})`)
   }
+
   return res.json()
 }
 
@@ -17,10 +21,8 @@ export function queryApi(question) {
   })
 }
 
-// Async generator that yields parsed SSE events from the streaming endpoint.
-// Each yielded value is a plain object with a `type` field.
 export async function* streamQuery(question) {
-  const res = await fetch('/api/query/stream', {
+  const res = await fetch(`${API_BASE_URL}/api/query/stream`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ question }),
