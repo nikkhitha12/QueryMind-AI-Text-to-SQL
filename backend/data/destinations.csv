@@ -1,0 +1,16 @@
+destination_id,destination_name,state,country,category
+D001,Goa,Goa,India,Beach
+D002,Manali,Himachal Pradesh,India,Mountain
+D003,Jaipur,Rajasthan,India,Heritage
+D004,Munnar,Kerala,India,Nature
+D005,Hyderabad,Telangana,India,City
+D006,Delhi,Delhi,India,Historical
+D007,Mumbai,Maharashtra,India,City
+D008,Rishikesh,Uttarakhand,India,Adventure
+D009,Ooty,Tamil Nadu,India,Hill Station
+D010,Agra,Uttar Pradesh,India,Historical
+D011,Kochi,Kerala,India,Coastal
+D012,Udaipur,Rajasthan,India,Heritage
+D013,Darjeeling,West Bengal,India,Hill Station
+D014,Pondicherry,Puducherry,India,Beach
+D015,Varanasi,Uttar Pradesh,India,Spiritual

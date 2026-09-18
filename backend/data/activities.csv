@@ -1,0 +1,31 @@
+activity_id,destination_id,activity_name,activity_type,price
+A001,D001,Scuba Diving,Adventure,3500
+A002,D001,Beach Sunset Cruise,Leisure,1800
+A003,D001,Parasailing,Adventure,2200
+A004,D002,Solang Valley Trek,Adventure,2500
+A005,D002,River Rafting,Adventure,1800
+A006,D002,Ropeway Ride,Leisure,1200
+A007,D003,Amber Fort Tour,Heritage,1500
+A008,D003,City Palace Visit,Heritage,1000
+A009,D003,Desert Village Tour,Culture,2200
+A010,D004,Tea Garden Tour,Nature,1200
+A011,D004,Waterfall Trek,Adventure,1800
+A012,D004,Spice Plantation Tour,Nature,1400
+A013,D005,Charminar Heritage Walk,Heritage,800
+A014,D005,Ramoji Film City Tour,Entertainment,1800
+A015,D005,Hussain Sagar Boat Ride,Leisure,600
+A016,D006,Red Fort Tour,Heritage,1000
+A017,D006,India Gate Tour,Historical,700
+A018,D006,Old Delhi Food Walk,Food,1200
+A019,D007,Gateway of India Tour,Historical,900
+A020,D007,Marine Drive Cruise,Leisure,1500
+A021,D007,Elephanta Caves Tour,Heritage,1800
+A022,D008,Ganga River Rafting,Adventure,2500
+A023,D008,Bungee Jumping,Adventure,3500
+A024,D008,Ganga Aarti Experience,Spiritual,900
+A025,D009,Ooty Lake Boating,Leisure,700
+A026,D009,Toy Train Ride,Leisure,1200
+A027,D009,Botanical Garden Tour,Nature,500
+A028,D010,Taj Mahal Tour,Historical,1500
+A029,D010,Agra Fort Tour,Historical,900
+A030,D010,Mehtab Bagh Visit,Nature,600

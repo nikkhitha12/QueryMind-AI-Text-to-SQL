@@ -1,0 +1,31 @@
+hotel_id,hotel_name,destination_id,price_per_night,rating
+H001,Sea Breeze Resort,D001,4500,4.5
+H002,Goa Palm Hotel,D001,3200,4.2
+H003,Sunset Beach Resort,D001,6800,4.7
+H004,Himalayan View Resort,D002,5200,4.6
+H005,Mountain Stay Manali,D002,3800,4.3
+H006,Snow Valley Hotel,D002,6100,4.8
+H007,Royal Jaipur Palace,D003,7500,4.7
+H008,Pink City Hotel,D003,4200,4.4
+H009,Heritage Haveli,D003,5600,4.6
+H010,Munnar Green Resort,D004,4800,4.5
+H011,Tea Valley Hotel,D004,3500,4.3
+H012,Munnar Hills Resort,D004,6200,4.7
+H013,Hyderabad Grand Hotel,D005,4000,4.2
+H014,Charminar View Hotel,D005,2800,4.0
+H015,Deccan Luxury Hotel,D005,6500,4.6
+H016,Delhi Heritage Inn,D006,5000,4.4
+H017,Capital View Hotel,D006,3600,4.1
+H018,Imperial Delhi Hotel,D006,8200,4.8
+H019,Mumbai Marine Hotel,D007,7000,4.5
+H020,Gateway Residency,D007,5500,4.3
+H021,City Lights Mumbai,D007,4300,4.1
+H022,River Adventure Resort,D008,3900,4.4
+H023,Ganga View Hotel,D008,4500,4.6
+H024,Adventure Valley Resort,D008,5800,4.7
+H025,Ooty Lake Resort,D009,4200,4.5
+H026,Blue Mountain Hotel,D009,3300,4.2
+H027,Queen Hills Resort,D009,5900,4.6
+H028,Taj Heritage Stay,D010,6200,4.7
+H029,Agra Fort Hotel,D010,4000,4.3
+H030,Marble Palace Inn,D010,5200,4.5
